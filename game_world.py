@@ -10,13 +10,11 @@ def add_object(o, depth = 0):   #depth: 0(배경), 1(캐릭터)
     world[depth].append(o)
 
 
-
-
 # 게임 로직
 def update():
     for layer in world:
         # 공이 제거되어도 같은 레이어의 나머지 객체를 모두 갱신한다.
-        for o in layer[:]:
+        for o in layer:
             o.update()
 
 # 게임 렌더링
